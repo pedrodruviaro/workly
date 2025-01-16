@@ -1,13 +1,13 @@
-<x-app-layout title="Dashboard">
+<x-app-layout title="Tags" description="Manage your project tags">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            Tags
         </h2>
     </x-slot>
 
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 text-gray-900">
-            Dashboard
+            Tags
         </div>
     </div>
 </x-app-layout>

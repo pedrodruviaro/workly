@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    // return view('dashboard');
+    return redirect(route('projects.index'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -17,4 +18,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
+// remove later
+Route::view('/projects', 'projects.index')->name('projects.index');
+Route::view('/tasks', 'tasks.index')->name('tasks.index');
+Route::view('/tags', 'tags.index')->name('tags.index');
+
+require __DIR__ . '/auth.php';
