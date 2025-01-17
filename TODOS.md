@@ -2,8 +2,8 @@
 
 [x] view => criação de projeto (/projects/create)
 [x] view => edição de projeto (/projects/edit/{id})
-[] view => criação de task (/tasks/create)
-[] view => edição de task (/tasks/edit/{id})
+[x] view => criação de task (/tasks/create)
+[x] view => edição de task (/tasks/edit/{id})
 
 [] model e migration => Project
 [] model e migration => Task

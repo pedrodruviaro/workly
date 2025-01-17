@@ -26,6 +26,9 @@ Route::view('/projects/edit/{id}', 'projects.edit')->name('projects.edit');
 Route::view('/projects/{id}', 'projects.show')->name('projects.show');
 
 Route::view('/tasks', 'tasks.index')->name('tasks.index');
+Route::view('/tasks/{project}/create', 'tasks.create')->name('tasks.create');
+Route::view('/tasks/{project}/edit/{id}', 'tasks.edit')->name('tasks.edit');
+
 Route::view('/tags', 'tags.index')->name('tags.index');
 
 require __DIR__ . '/auth.php';

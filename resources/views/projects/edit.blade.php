@@ -76,9 +76,8 @@
                         </div>
                     </div>
 
-
                     <div>
-                        <x-primary-button>Create</x-primary-button>
+                        <x-primary-button>Save</x-primary-button>
                     </div>
                 </div>
             </form>
