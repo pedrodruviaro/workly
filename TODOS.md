@@ -1,8 +1,8 @@
 Initial routes
 
-[] /dashboard -> for now, redirect to /projects
+[x] /dashboard -> for now, redirect to /projects
 
-[] /projects
+[x] /projects
 [] /projects/{id}
 [] /projects/create
 [] /projects/edit/{id}
@@ -12,7 +12,7 @@ Initial routes
 [] /tasks/create
 [] /tasks/edit/{id}
 
-[] /tags
+[x] /tags
 
 ---
 

@@ -5,9 +5,47 @@
         </h2>
     </x-slot>
 
-    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="p-6 text-gray-900">
-            Tags
-        </div>
-    </div>
+    <section class="mb-10">
+        <x-card>
+            <div class="mb-4 lg:mb-6">
+                <h2 class="text-lg font-medium text-gray-900">Create a new tag</h2>
+            </div>
+
+            <form>
+                <div class="mb-4 grid gap-4 md:grid-cols-2 md:items-start md:gap-2">
+                    <fieldset>
+                        <x-input-label for="name" value="Name*" />
+                        <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" required
+                            autofocus />
+                        <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                    </fieldset>
+
+                    <fieldset>
+                        <x-input-label for="slug" value="Slug*" />
+                        <x-text-input id="slug" name="slug" type="text" class="mt-1 block w-full" required />
+                        <x-input-error class="mt-2" :messages="$errors->get('slug')" />
+                    </fieldset>
+                </div>
+
+                <x-primary-button type="submit">Create</x-primary-button>
+            </form>
+        </x-card>
+    </section>
+
+    <section>
+        <x-card>
+            <div class="mb-4 lg:mb-6">
+                <h2 class="text-lg font-medium text-gray-900">Manage your tags</h2>
+            </div>
+
+            <ul class="space-y-3">
+                @php
+                    $count = [1, 1, 1];
+                @endphp
+                @foreach ($count as $i)
+                    <x-tag.list-item />
+                @endforeach
+            </ul>
+        </x-card>
+    </section>
 </x-app-layout>
