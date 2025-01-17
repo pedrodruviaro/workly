@@ -1,4 +1,4 @@
-<article class="p-4 lg:p-6 bg-white rounded-lg border">
+<x-card>
     <header class="mb-3">
         <h2 class="font-bold text-lg lg:text-xl">Luza Hub</h2>
         <span class="text-xs text-gray-500">Not Paid</span>
@@ -32,4 +32,4 @@
             </span>
         </div>
     </footer>
-</article>
+</x-card>
