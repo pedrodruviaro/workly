@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('priority'); // todo -> move to Enum later
             $table->boolean('completed')->default(false);
-            $table->timestamp('due_date');
+            $table->timestamp('due_date')->useCurrent();
             $table->timestamps();
         });
     }

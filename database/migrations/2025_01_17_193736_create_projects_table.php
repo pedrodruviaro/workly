@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('value', 100);
             $table->string('status'); // todo -> move to Enum later
-            $table->timestamp('due_date');
+            $table->timestamp('due_date')->useCurrent();
             $table->timestamps();
         });
     }
