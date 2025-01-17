@@ -3,8 +3,8 @@ Initial routes
 [x] /dashboard -> for now, redirect to /projects
 
 [x] /projects
-[ ] /projects/{id}
-[ ] /projects/create
+[x] /projects/{id}
+[] /projects/create
 [] /projects/edit/{id}
 
 [x] /tasks

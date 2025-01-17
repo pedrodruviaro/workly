@@ -1,3 +1,5 @@
+@props(['showProjectButton' => true])
+
 <x-card>
     <header class="flex flex-wrap gap-2 items-center mb-3">
         <span class="text-sm font-medium bg-indigo-100 text-indigo-600 border border-indigo-300 rounded-full px-2">
@@ -40,6 +42,9 @@
                 <img src="/images/icons/edit.svg" width="20" height="20" aria-hidden="true" alt="">
             </button>
         </div>
-        <x-primary-button size="small" variant="outline">Project Details</x-primary-button>
+
+        @if ($showProjectButton)
+            <x-primary-button size="small" variant="outline">Project Details</x-primary-button>
+        @endif
     </footer>
 </x-card>
