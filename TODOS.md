@@ -11,7 +11,7 @@
 
 [x] criar relações entre os modelos
 
-[] controller => ProjectController (resource)
+[x] controller => ProjectController (resource)
 [] controller => TaskController (resource)
 [] controller => TagController (resource)
 
