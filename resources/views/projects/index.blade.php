@@ -5,9 +5,26 @@
         </h2>
     </x-slot>
 
-    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="p-6 text-gray-900">
-            Projects
-        </div>
-    </div>
+    <section class="mb-4">
+        <nav class="flex flex-wrap gap-2 items-center md:gap-4">
+            <a class="text-sm text-gray-600 hover:text-gray-900 border-b-2 border-gray-600" href="#">All (10)</a>
+            <a class="text-sm text-gray-600 hover:text-gray-700" href="#">In Progress (6)</a>
+            <a class="text-sm text-gray-600 hover:text-gray-700" href="#">Completed (3)</a>
+            <a class="text-sm text-gray-600 hover:text-gray-700" href="#">On Hold (1)</a>
+        </nav>
+    </section>
+
+    <section class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        @php
+            $count = [1, 1, 1, 1, 1, 1, 1, 1];
+        @endphp
+        @foreach ($count as $i)
+            <x-project.card />
+        @endforeach
+    </section>
+
+    <section class="mt-6">
+        {{-- pagination --}}
+        <div class="bg-gray-600 h-4 opacity-25 max-w-60 mx-auto"></div>
+    </section>
 </x-app-layout>
