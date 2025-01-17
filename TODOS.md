@@ -1,22 +1,24 @@
-Initial routes
+# Todos
 
-[x] /dashboard -> for now, redirect to /projects
+[x] view => criação de projeto (/projects/create)
+[x] view => edição de projeto (/projects/edit/{id})
+[] view => criação de task (/tasks/create)
+[] view => edição de task (/tasks/edit/{id})
 
-[x] /projects
-[x] /projects/{id}
-[] /projects/create
-[] /projects/edit/{id}
+[] model e migration => Project
+[] model e migration => Task
+[] model e migration => Tag
 
-[x] /tasks
+[] criar relações entre os modelos
 
-<!-- [] /tasks/{id} -->
+[] controller => ProjectController (resource)
+[] controller => TaskController (resource)
+[] controller => TagController (resource)
 
-[] /tasks/create
-[] /tasks/edit/{id}
+[] route => projects
+[] route => tasks
+[] route => tags
 
-[x] /tags
+[] criar factory e seeder para um usuário teste
 
----
-
-Todos
-[x] Main layout, meta tags and button component
+TDB;

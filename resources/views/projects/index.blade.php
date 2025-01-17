@@ -1,8 +1,14 @@
 <x-app-layout title="Projects" description="Your projects">
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Projects
-        </h2>
+        <div class="flex justify-between flex-wrap gap-3 items-center">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                Projects
+            </h2>
+
+            <div>
+                <x-primary-button link href="{{ route('projects.create') }}">Create new</x-primary-button>
+            </div>
+        </div>
     </x-slot>
 
     <section class="mb-4">

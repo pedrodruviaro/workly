@@ -21,7 +21,10 @@ Route::middleware('auth')->group(function () {
 
 // remove later
 Route::view('/projects', 'projects.index')->name('projects.index');
+Route::view('/projects/create', 'projects.create')->name('projects.create');
+Route::view('/projects/edit/{id}', 'projects.edit')->name('projects.edit');
 Route::view('/projects/{id}', 'projects.show')->name('projects.show');
+
 Route::view('/tasks', 'tasks.index')->name('tasks.index');
 Route::view('/tags', 'tags.index')->name('tags.index');
 
