@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class TagController extends Controller
@@ -12,7 +14,7 @@ class TagController extends Controller
      */
     public function index(): View
     {
-        $tags = [];
+        $tags = Tag::where('user_id', Auth::id())->latest()->get();
         return view("tags.index", ['tags' => $tags]);
     }
 

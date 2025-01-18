@@ -39,11 +39,8 @@
             </div>
 
             <ul class="space-y-3">
-                @php
-                    $count = [1, 1, 1];
-                @endphp
-                @foreach ($count as $i)
-                    <x-tag.list-item />
+                @foreach ($tags as $tag)
+                    <x-tag.list-item :$tag />
                 @endforeach
             </ul>
         </x-card>

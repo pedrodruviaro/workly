@@ -12,13 +12,30 @@
 [x] criar relações entre os modelos
 
 [x] controller => ProjectController (resource)
-[] controller => TaskController (resource)
-[] controller => TagController (resource)
+[x] controller => TaskController (resource)
+[x] controller => TagController (resource)
 
-[] route => projects
-[] route => tasks
-[] route => tags
+[x] route => projects
+[x] route => tasks
+[x] route => tags
 
-[] criar factory e seeder para um usuário teste
+[x] ProjectFactory
+[x] TaskFactory
+[x] TagFactory
+
+[x] ProjectSeeder
+[x] TaskSeeder
+[x] TagSeeder
+
+[x] Listar Projetos
+[x] Listar Tasks
+[x] Listar Tags
+
+[] Criar empty states (projetos, tasks, projetos (tasks), tags)
+
+[] Finalizar página do projeto (show)
+
+[] TagController -> Criar tags
+[] TagController -> Apagar Tags
 
 TDB;

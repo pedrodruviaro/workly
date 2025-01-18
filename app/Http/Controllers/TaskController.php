@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class TaskController extends Controller
@@ -14,7 +15,11 @@ class TaskController extends Controller
      */
     public function index(): View
     {
-        $tasks = [];
+        // only returns the project id using the relation 'project'
+        $tasks = Task::with(['project' => function ($query) {
+            $query->select('id');
+        }])->where('user_id', Auth::id())->latest()->paginate(15);
+
         return view('tasks.index', ['tasks' => $tasks]);
     }
 

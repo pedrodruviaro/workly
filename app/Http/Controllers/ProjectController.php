@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ProjectController extends Controller
@@ -13,7 +15,8 @@ class ProjectController extends Controller
      */
     public function index(): View
     {
-        $projects = [];
+        $projects = Project::where('user_id', Auth::id())->with('tags')->latest()->paginate(9);
+
         return view('projects.index', ['projects' => $projects]);
     }
 

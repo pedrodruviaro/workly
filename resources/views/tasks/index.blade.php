@@ -14,17 +14,14 @@
 
     <section>
         <ul class="space-y-3">
-            @php
-                $count = [1, 1, 1, 1, 1, 1];
-            @endphp
-            @foreach ($count as $i)
-                <x-task.card />
+
+            @foreach ($tasks as $task)
+                <x-task.card :$task />
             @endforeach
         </ul>
     </section>
 
     <section class="mt-6">
-        {{-- pagination --}}
-        <div class="bg-gray-600 h-4 opacity-25 max-w-60 mx-auto"></div>
+        {{ $tasks->links() }}
     </section>
 </x-app-layout>

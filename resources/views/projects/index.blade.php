@@ -21,16 +21,12 @@
     </section>
 
     <section class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        @php
-            $count = [1, 1, 1, 1, 1, 1, 1, 1];
-        @endphp
-        @foreach ($count as $i)
-            <x-project.card />
+        @foreach ($projects as $project)
+            <x-project.card :$project />
         @endforeach
     </section>
 
     <section class="mt-6">
-        {{-- pagination --}}
-        <div class="bg-gray-600 h-4 opacity-25 max-w-60 mx-auto"></div>
+        {{ $projects->links() }}
     </section>
 </x-app-layout>

@@ -59,9 +59,6 @@
 
     <section>
         <ul class="space-y-3">
-            @php
-                $count = [1, 1];
-            @endphp
             @foreach ($count as $i)
                 <x-task.card showProjectButton="{{ false }}" />
             @endforeach
