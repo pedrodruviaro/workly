@@ -7,6 +7,10 @@
     </div>
 
     <div>
-        <x-primary-button variant="danger" size="small">Remove</x-primary-button>
+        <form action="{{ route('tags.destroy', $tag) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <x-primary-button variant="danger" size="small">Remove</x-primary-button>
+        </form>
     </div>
 </li>

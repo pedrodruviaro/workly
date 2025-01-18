@@ -35,7 +35,10 @@
 
 [] Finalizar página do projeto (show)
 
-[] TagController -> Criar tags
-[] TagController -> Apagar Tags
+[x] TagController -> Criar tags
+[x] TagController -> Apagar Tags
+[x] TagPolicy
+[] Mostrar mensagem (toast?) de erro/sucesso ao realizar ação
+[] Criar modal de confirmação de ação
 
 TDB;
