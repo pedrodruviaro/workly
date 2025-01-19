@@ -38,7 +38,12 @@
 [x] TagController -> Criar tags
 [x] TagController -> Apagar Tags
 [x] TagPolicy
-[] Mostrar mensagem (toast?) de erro/sucesso ao realizar ação
-[] Criar modal de confirmação de ação
+[x] Mostrar mensagem de erro/sucesso ao realizar ação
+
+<!-- [] Criar modal de confirmação de ação -->
+
+[] Criar um projeto
+[] Editar um projeto
+[] FormRequest para validar em um só lugar
 
 TDB;

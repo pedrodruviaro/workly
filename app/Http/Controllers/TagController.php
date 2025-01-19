@@ -50,7 +50,7 @@ class TagController extends Controller
 
         $request->user()->tags()->create($data);
 
-        return redirect(route('tags.index'));
+        return redirect(route('tags.index'))->with(['success' => 'Tag Created!']);
     }
 
     /**
@@ -86,6 +86,6 @@ class TagController extends Controller
 
         $tag->delete();
 
-        return redirect(route('tags.index'));
+        return redirect(route('tags.index'))->with(['alert' => "Tag $tag->name Removed!"]);
     }
 }
