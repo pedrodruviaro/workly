@@ -41,7 +41,7 @@
 [] Finalizar página do projeto (show)
 [x] Criar um projeto
 [] Editar um projeto
-[] FormRequest para validar em um só lugar
+[x] FormRequest de projetos para validar em um só lugar
 
 [] Criar empty states (projetos, tasks, projetos (tasks), tags)
 

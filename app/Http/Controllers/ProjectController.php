@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\View\View;
 
 class ProjectController extends Controller
@@ -64,7 +65,12 @@ class ProjectController extends Controller
      */
     public function show(Project $project): View
     {
-        return view("projects.show", ['project' => $project]);
+        Gate::authorize('view', $project);
+
+        $tasks = $project->tasks()->latest()->paginate(20);
+        $tags = $project->tags()->get();
+
+        return view("projects.show", ['project' => $project, 'tasks' => $tasks, 'tags' => $tags]);
     }
 
     /**
