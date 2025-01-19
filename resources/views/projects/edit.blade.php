@@ -7,6 +7,12 @@
         </div>
     </x-slot>
 
+    @if (session('success'))
+        <div class="mb-4">
+            <x-info text="{{ session('success') }}" variant="success" />
+        </div>
+    @endif
+
     <section>
         <x-card>
             <div class="mb-4 lg:mb-6">

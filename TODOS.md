@@ -31,10 +31,6 @@
 [x] Listar Tasks
 [x] Listar Tags
 
-[] Criar empty states (projetos, tasks, projetos (tasks), tags)
-
-[] Finalizar página do projeto (show)
-
 [x] TagController -> Criar tags
 [x] TagController -> Apagar Tags
 [x] TagPolicy
@@ -42,8 +38,11 @@
 
 <!-- [] Criar modal de confirmação de ação -->
 
-[] Criar um projeto
+[] Finalizar página do projeto (show)
+[x] Criar um projeto
 [] Editar um projeto
 [] FormRequest para validar em um só lugar
+
+[] Criar empty states (projetos, tasks, projetos (tasks), tags)
 
 TDB;

@@ -16,14 +16,14 @@
                 <div class="mb-4 grid gap-4 md:grid-cols-2 md:items-start md:gap-2">
                     <fieldset>
                         <x-input-label for="name" value="Name*" />
-                        <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" required
-                            autofocus value="{{ old('name') }}" />
+                        <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" autofocus
+                            value="{{ old('name') }}" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
                     </fieldset>
 
                     <fieldset>
                         <x-input-label for="slug" value="Slug*" />
-                        <x-text-input id="slug" name="slug" type="text" class="mt-1 block w-full" required
+                        <x-text-input id="slug" name="slug" type="text" class="mt-1 block w-full"
                             value="{{ old('slug') }}" />
                         <x-input-error class="mt-2" :messages="$errors->get('slug')" />
                     </fieldset>
