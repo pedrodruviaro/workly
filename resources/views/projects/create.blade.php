@@ -45,8 +45,8 @@
                                     'on_hold' => 'On Hold',
                                 ];
                             @endphp
-                            <x-select :options="$status" id="status" class="block mt-1 w-full" type="text"
-                                name="status" />
+                            <x-select :options="$status" value="{{ old('status') }}" id="status"
+                                class="block mt-1 w-full" type="text" name="status" />
                             <x-input-error :messages="$errors->get('status')" class="mt-2" />
                         </fieldset>
 

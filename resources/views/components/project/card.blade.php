@@ -27,10 +27,10 @@
                 </ul>
             @endisset
     </main>
-    <footer>
-        <div class="flex justify-end">
+    <footer class="mt-2">
+        <div>
             <span
-                class="text-sm font-medium bg-indigo-100 text-indigo-600 border border-indigo-300 rounded-full px-2 left-5">
+                class="text-sm font-medium bg-indigo-50 text-indigo-400 border border-indigo-200 rounded-full px-2 left-5">
                 Due Date: {{ Carbon\Carbon::parse($project->due_date)->format('M d Y') }}
             </span>
         </div>

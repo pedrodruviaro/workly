@@ -38,11 +38,15 @@
 
 <!-- [] Criar modal de confirmação de ação -->
 
-[] Finalizar página do projeto (show)
+[x] Finalizar página do projeto (show)
 [x] Criar um projeto
-[] Editar um projeto
+[x] Editar um projeto
 [x] FormRequest de projetos para validar em um só lugar
 
-[] Criar empty states (projetos, tasks, projetos (tasks), tags)
+[] Adicionar CTA de criação de tarefa
+[] Criar política de tarefas
+[] View de criação de tarefa + método
+[] View de edição de tarefa + método
+[] Marcar uma tarefa como concluída
 
-TDB;
+[] Criar empty states (projetos, tasks, projetos (tasks), tags)

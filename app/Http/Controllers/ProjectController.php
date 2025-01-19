@@ -78,15 +78,43 @@ class ProjectController extends Controller
      */
     public function edit(Project $project): View
     {
-        return view("projects.edit", ['project' => $project]);
+        Gate::authorize('update', $project);
+
+        $tags = Tag::where('user_id', Auth::id())->latest()->get();
+        $projectTags = $project->tags()->get();
+
+        return view("projects.edit", [
+            'project' => $project,
+            'projectTags' => $projectTags,
+            'tags' => $tags,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StoreProjectRequest $request, Project $project)
     {
-        //
+        Gate::authorize('update', $project);
+
+        $request->validated();
+
+        $formatedDate = (Carbon::parse($request['due_date']));
+        $tags = $request->input('tags', []);
+
+        $project->update([
+            'user_id' => Auth::id(),
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'value' => $request['value'],
+            'status' => $request['status'],
+            'due_date' => $formatedDate
+        ]);
+
+        $project->save();
+        $project->tags()->sync($tags);
+
+        return redirect(route('projects.edit', $project))->with(['success' => 'Project updated!']);
     }
 
     /**
