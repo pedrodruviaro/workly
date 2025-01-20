@@ -25,15 +25,14 @@
     </main>
     <footer class="flex justify-between flex-wrap gap-2">
         <div class="flex gap-3">
-            <button aria-lable="Mark as complete"
-                class="bg-green-400 border hover:bg-green-500 focus:bg-green-500 focus:ring-green-200 rounded-md p-1.5">
+            <button aria-lable="Mark as complete" class="border border-gray-700  focus:ring-green-200 rounded-md p-1.5">
                 <img src="/images/icons/check.svg" width="20" height="20" aria-hidden="true" alt="">
             </button>
 
-            <button aria-lable="Mark as complete"
-                class="bg-cyan-400 border hover:bg-cyan-500 focus:bg-cyan-500 focus:ring-cyan-200 rounded-md p-1.5">
+            <a href="{{ route('tasks.edit', $task) }}" aria-lable="Edit"
+                class="border border-gray-700 focus:ring-cyan-200 rounded-md p-1.5">
                 <img src="/images/icons/edit.svg" width="20" height="20" aria-hidden="true" alt="">
-            </button>
+            </a>
         </div>
 
         @if ($showProjectButton)

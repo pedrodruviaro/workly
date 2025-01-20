@@ -44,8 +44,10 @@ Route::middleware(['auth'])->group(function () {
     // Tasks
     Route::controller(TaskController::class)->group(function () {
         Route::get('/tasks', 'index')->name('tasks.index');
+        Route::post('/tasks/{project}', 'store')->name('tasks.store');
         Route::get('/tasks/{project}/create', 'create')->name('tasks.create');
-        Route::get('/tasks/{project}/edit/{task}', 'edit')->name('tasks.edit');
+        Route::get('/tasks/edit/{task}', 'edit')->name('tasks.edit');
+        Route::put('/tasks/edit/{task}/{project}', 'update')->name('tasks.update');
     });
 });
 

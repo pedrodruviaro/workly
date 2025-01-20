@@ -61,12 +61,16 @@
 </section>
 
 
-<section class="mb-4">
+<section class="mb-4 flex flex-wrap gap-4 items-center justify-between">
     <nav class="flex flex-wrap gap-2 items-end md:gap-4">
         <h2 class="text-lg lg:text-xl font-medium text-gray-900">Tasks</h2>
         <a class="text-sm text-gray-600 hover:text-gray-700 border-b-2 border-gray-600" href="#">Todo (2)</a>
         <a class="text-sm text-gray-600 hover:text-gray-700" href="#">Completed (3)</a>
     </nav>
+
+    <div>
+        <x-primary-button link href="{{ route('tasks.create', $project) }}">Create new</x-primary-button>
+    </div>
 </section>
 
 <section>

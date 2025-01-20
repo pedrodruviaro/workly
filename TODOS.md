@@ -43,10 +43,15 @@
 [x] Editar um projeto
 [x] FormRequest de projetos para validar em um só lugar
 
-[] Adicionar CTA de criação de tarefa
-[] Criar política de tarefas
-[] View de criação de tarefa + método
-[] View de edição de tarefa + método
-[] Marcar uma tarefa como concluída
+[x] Adicionar CTA de criação de tarefa
+[x] Criar política de tarefas
+[x] View de criação de tarefa + método
+[x] View de edição de tarefa + método
+[x] Criar form request para tarefas
+[] Marcar uma tarefa como concluída e corrigir link para edição da mesma
+
+[] Marcar projeto como concluído
+
+[] Criar componente de due_date que troca a cor se estiver ou não atrasado
 
 [] Criar empty states (projetos, tasks, projetos (tasks), tags)
